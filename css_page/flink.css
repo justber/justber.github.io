@@ -1,0 +1,96 @@
+#article-container img {
+  margin: 0 auto !important;
+}
+.flink-list {
+  overflow: auto;
+}
+.flink-list > a {
+  width: calc(25% - 15px);
+  height: 130px;
+  position: relative;
+  display: block;
+  margin: 15px 7px;
+  float: left;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease 0s, transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  box-shadow: 0 14px 38px rgba(0,0,0,0.08), 0 3px 8px rgba(0,0,0,0.06);
+}
+.flink-list > a:hover .info {
+  transform: translateY(-100%);
+}
+.flink-list > a:hover .wrapper img {
+  transform: scale(1.2);
+}
+.flink-list > a .cover {
+  width: 100%;
+  transition: transform 0.5s ease-out;
+}
+.flink-list > a .wrapper {
+  position: relative;
+}
+.flink-list > a .wrapper .fadeIn {
+  animation: coverIn 0.8s ease-out forwards;
+}
+.flink-list > a .wrapper img {
+  height: 130px;
+  pointer-events: none;
+}
+.flink-list > a .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: rgba(255,255,255,0.7);
+  transition: transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+}
+.flink-list > a .info img {
+  position: relative;
+  top: 22px;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1;
+  text-align: center;
+  pointer-events: none;
+}
+.flink-list > a .info span {
+  padding: 20px 10% 60px 10%;
+  font-size: 16px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  background-color: rgba(255,255,255,0.7);
+  color: var(--font-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.flink-list>a .info,
+.flink-list>a .wrapper .cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1024px) {
+  .flink-list > a {
+    width: calc(33.33333% - 15px);
+  }
+}
+@media screen and (max-width: 600px) {
+  .flink-list > a {
+    width: calc(50% - 15px);
+  }
+}
+[data-theme=dark] .flink-list a .info,
+[data-theme=dark] .flink-list a .info span {
+  background-color: rgba(0,0,0,0.6);
+}
+[data-theme=dark] .flink-list > a:hover:before {
+  background-color: rgba(18,18,18,0.8);
+}
