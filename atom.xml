@@ -81,7 +81,7 @@
     <link href="http://example.com/posts/d4aa5614/"/>
     <id>http://example.com/posts/d4aa5614/</id>
     <published>2022-08-25T12:01:56.000Z</published>
-    <updated>2022-08-26T05:17:36.069Z</updated>
+    <updated>2022-08-28T13:05:05.207Z</updated>
     
     <content type="html"><![CDATA[<h1 id="线程的概念"><a href="#线程的概念" class="headerlink" title="线程的概念"></a>线程的概念</h1><h2 id="一：什么是进程"><a href="#一：什么是进程" class="headerlink" title="一：什么是进程"></a>一：什么是进程</h2><p><strong>进程</strong>：操作系统的分配的最小单位。在远古的操作系统每一个程序其实都是开了单独的进程。及在同一个时间只能运行一个进程，随着多道批处理操作系统的发展。支持了可以同时运行多个进程。但是进程之间的切换。成本很高。</p><p><strong>线程</strong>：由于进程之间的切换成本很高，且之间的内存是独立的，无法直接共享，线程是进程的子集，一个线程可以拥有多个进程，是进程的一条执行路径。  同一个进程的多个线程之间有些内存是可以共享的（方法区、堆），也有些内存是独立的（栈（包括虚拟机栈和本地方法栈）、程序计数器） </p>]]></content>
     
